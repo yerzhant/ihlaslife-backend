@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/ihlaslife
+    username: ihlaslife
+
+  output:
+    ansi:
+      enabled: always
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL55Dialect
+    hibernate:
+      ddl-auto: update
+
+  data:
+    rest:
+      base-path: /api
