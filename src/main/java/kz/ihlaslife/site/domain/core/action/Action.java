@@ -33,8 +33,6 @@ public class Action extends BaseEntity {
 
     private Integer paidAmount;
 
-    private Integer confirmedAmount;
-
     public Integer getLeftAmount() {
         return targetAmount - paidAmount;
     }
