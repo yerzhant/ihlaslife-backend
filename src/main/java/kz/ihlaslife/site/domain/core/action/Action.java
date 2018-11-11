@@ -7,12 +7,13 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
 @Data
-public class Action extends BaseEntity {
+class Action extends BaseEntity {
 
     @NotNull
     @ManyToOne
@@ -29,11 +30,10 @@ public class Action extends BaseEntity {
     private String description;
 
     @NotNull
+    @Min(0)
     private Integer targetAmount;
 
+    @NotNull
+    @Min(0)
     private Integer paidAmount;
-
-    public Integer getLeftAmount() {
-        return targetAmount - paidAmount;
-    }
 }

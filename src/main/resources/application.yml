@@ -17,3 +17,9 @@ spring:
   data:
     rest:
       base-path: /api
+
+  resources:
+    static-locations: file:./pub
+#    cache:
+#      cachecontrol:
+#        max-age: 14400
