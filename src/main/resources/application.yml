@@ -23,3 +23,6 @@ spring:
 #    cache:
 #      cachecontrol:
 #        max-age: 14400
+
+server:
+  port: 8082
